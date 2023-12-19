@@ -23,7 +23,7 @@ class BeerManager {
     
     var todayRevenue: Double = 0
     var totalSoldBeers: Int = 0
-    var initialVolume = 10
+  
     
     
     

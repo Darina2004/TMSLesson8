@@ -80,9 +80,9 @@ class ViewController: UIViewController {
     @IBAction func EndDayTapped(_ sender: UIButton) {
         let (totalSoldBeears, revenue) = BeerManager.shared.endDay()
         SoldBeer.isHidden = false
-        SoldBeer.text = "ПИВА ПРОДАНО: \(totalSoldBeears)"
+        SoldBeer.text = "ПИВА ПРОДАНО: \(totalSoldBeears)L"
         ButtonEndDay.setTitle("НАЧАЛО ДНЯ", for: .normal)
-        LabelRevenu.text = "ВЫРУЧКА: \(BeerManager.shared.getTodayRevenue())"
+        LabelRevenu.text = "ВЫРУЧКА: \(BeerManager.shared.getTodayRevenue())$"
         BeerManager.shared.resetTodayRevenue()
         BeerManager.shared.resetStock(beer: myBeer)
         LabelIppa.text = "\(myBeer.price)$      \(myBeer.volume) L"
@@ -131,7 +131,7 @@ class ViewController: UIViewController {
             BeerManager.shared.sellBeer(beer: stoutBeer)
             LabelStout.text =  "\(stoutBeer.price)$      \(stoutBeer.volume)L"
             LabelRevenu.text =  "\(BeerManager.shared.getTodayRevenue())$"
-            SoldBeer.text = "Пива продано: \(BeerManager.shared.totalSoldBeers)"
+            SoldBeer.text = "\(BeerManager.shared.totalSoldBeers)"
             
         }
         
