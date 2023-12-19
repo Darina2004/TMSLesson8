@@ -34,12 +34,7 @@ class BeerManager {
             todayRevenue += beer.price
             totalSoldBeers += 1
             
-        } else {
-            print("Sorry, \(beer.name) is out of stock.")
-            
         }
-        
-        
     }
     
     func endDay() -> (totalSoldBeers: Int, revenue: Double ) {
